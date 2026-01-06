@@ -98,14 +98,14 @@ export default function AboutPage() {
                                 ABOUT CATALYZER
                             </div>
 
-                            <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold mb-8 leading-tight" style={{ color: '#FFFFFF' }}>
+                            <h1 className="text-2xl md:text-6xl font-bold mb-6 md:mb-8 leading-tight" style={{ color: '#FFFFFF' }}>
                                 You can study anywhere.<br />
                                 But <span style={{ color: '#B2A9FF' }}>understanding</span> starts here
                             </h1>
-                            <p className="text-base md:text-lg font-normal max-w-3xl mx-auto leading-relaxed text-gray-200">
+                            <p className="text-sm md:text-lg font-normal max-w-3xl mx-auto leading-relaxed text-gray-200">
                                 Catalyzers was created for students who are already studying in big coaching institutes but feel confused, left behind, or hesitant to ask doubts.
                                 <br /><br />
-                                In large classrooms, it’s easy for some students to struggle silently — not because they are weak, but because they need personal attention and clearer explanations.
+                                In large classrooms, it's easy for some students to struggle silently — not because they are weak, but because they need personal attention and clearer explanations.
                                 <br /><br />
                                 At Catalyzers, we work alongside your main coaching institute to help you truly understand concepts, clear doubts without hesitation, and regain confidence in your preparation for JEE and NEET.
                             </p>

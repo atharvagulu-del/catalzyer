@@ -10,7 +10,7 @@ export default function Header() {
     return (
         <>
             <header className="sticky top-0 z-50 w-full border-b bg-white/95 backdrop-blur supports-[backdrop-filter]:bg-white/60">
-                <div className="container flex h-16 items-center justify-between px-4 md:px-6">
+                <div className="container flex h-16 items-center gap-3 md:gap-0 md:justify-between px-4 md:px-6">
                     {/* Mobile Menu Toggle */}
                     <button
                         className="md:hidden p-2"
@@ -57,7 +57,7 @@ export default function Header() {
                                 </svg>
                             </div>
                         </div>
-                        <span className="text-xl font-bold bg-gradient-to-r from-primary to-primary-dark bg-clip-text text-transparent">
+                        <span className="hidden sm:block text-xl font-bold bg-gradient-to-r from-primary to-primary-dark bg-clip-text text-transparent">
                             Catalyzer
                         </span>
                     </a>
@@ -103,8 +103,8 @@ export default function Header() {
                     </nav>
 
                     {/* Book Demo Button */}
-                    <a href="https://cal.com/atharva-gulve-9osunz/free-counselling" target="_blank" rel="noopener noreferrer">
-                        <Button size="default" className="shadow-md">
+                    <a href="https://cal.com/atharva-gulve-9osunz/free-counselling" target="_blank" rel="noopener noreferrer" className="ml-auto md:ml-0">
+                        <Button size="default" className="shadow-md rounded-md px-4 py-2 h-10">
                             Book Free Demo
                         </Button>
                     </a>
@@ -145,13 +145,6 @@ export default function Header() {
                         </a>
                         <a
                             href="/about"
-                            className="text-lg font-medium hover:text-primary transition-colors py-2"
-                            onClick={() => setMobileMenuOpen(false)}
-                        >
-                            About
-                        </a>
-                        <a
-                            href="/#about"
                             className="text-lg font-medium hover:text-primary transition-colors py-2"
                             onClick={() => setMobileMenuOpen(false)}
                         >
