@@ -41,22 +41,6 @@ export default function ChallengeInterface({ questions, title, topicMap = {}, ba
     const [timeLeft, setTimeLeft] = useState(45 * 60); // 45 minutes
     const [isTimerRunning, setIsTimerRunning] = useState(true);
 
-    if (!questions || questions.length === 0) {
-        return (
-            <div className="flex items-center justify-center h-screen bg-gray-50">
-                <div className="text-center">
-                    <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-blue-600 mx-auto mb-4"></div>
-                    <p className="text-gray-600">Loading Challenge...</p>
-                </div>
-            </div>
-        );
-    }
-
-    const question = questions[currentQuestionIndex];
-    if (!question) return null; // Safety guard
-
-    const totalQuestions = questions.length;
-
     // Timer Logic
     useEffect(() => {
         if (timeLeft > 0 && isTimerRunning && !showResults) {
@@ -87,6 +71,22 @@ export default function ChallengeInterface({ questions, title, topicMap = {}, ba
             }, 250);
         }
     }, [showResults]);
+
+    if (!questions || questions.length === 0) {
+        return (
+            <div className="flex items-center justify-center h-screen bg-gray-50">
+                <div className="text-center">
+                    <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-blue-600 mx-auto mb-4"></div>
+                    <p className="text-gray-600">Loading Challenge...</p>
+                </div>
+            </div>
+        );
+    }
+
+    const question = questions[currentQuestionIndex];
+    if (!question) return null; // Safety guard
+
+    const totalQuestions = questions.length;
 
     const formatTime = (seconds: number) => {
         const mins = Math.floor(seconds / 60);

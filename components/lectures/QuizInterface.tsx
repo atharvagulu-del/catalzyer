@@ -122,7 +122,7 @@ export default function QuizInterface({ questions = [], title, onComplete }: Qui
                 </div>
                 <h2 className="text-3xl font-bold text-gray-900 mb-2">Practice Complete!</h2>
                 <p className="text-gray-600 mb-8 max-w-md">
-                    You've leveled up your skills on <strong>{title}</strong>.
+                    You&apos;ve leveled up your skills on <strong>{title}</strong>.
                     <br />
                     Score: {score}/{questions.length} ({percentage}%)
                 </p>
@@ -228,7 +228,6 @@ export default function QuizInterface({ questions = [], title, onComplete }: Qui
                                     // Shake animation only for the wrong option
                                     animate={isWrong ? { x: [-5, 5, -5, 5, 0] } : {}}
                                     transition={{ type: 'spring', stiffness: 500, damping: 15 }}
-                                    key={`opt-${index}-${shake}`} // Re-trigger animation
                                     disabled={status === 'correct'}
                                     className={`relative w-full text-left p-5 rounded-lg transition-all duration-200 flex items-start gap-4 group outline-none ${containerClass}`}
                                 >
