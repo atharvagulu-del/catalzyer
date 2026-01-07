@@ -95,10 +95,10 @@ export default function Header() {
                             About
                         </a>
                         <a
-                            href="/#contact"
+                            href="/lectures"
                             className="text-sm font-medium hover:text-primary transition-colors"
                         >
-                            Contact
+                            Lectures
                         </a>
                     </nav>
 
@@ -151,11 +151,11 @@ export default function Header() {
                             About
                         </a>
                         <a
-                            href="/#contact"
+                            href="/lectures"
                             className="text-lg font-medium hover:text-primary transition-colors py-2"
                             onClick={() => setMobileMenuOpen(false)}
                         >
-                            Contact
+                            Lectures
                         </a>
                     </nav>
                 </div>

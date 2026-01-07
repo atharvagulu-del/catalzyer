@@ -92,24 +92,54 @@ export default function HeroCarousel() {
                     {/* Slide 2 - Year End Sale */}
                     <div className="embla__slide flex-[0_0_100%] min-w-0">
                         <div className="container px-4 md:px-6 py-16 md:py-24">
-                            <div className="flex flex-col items-center justify-center text-center space-y-8 min-h-[400px]">
-                                <div className="inline-block bg-secondary text-white px-6 py-2 rounded-full font-semibold text-sm">
-                                    Year End Sale
+                            <div className="grid lg:grid-cols-2 gap-12 items-center">
+                                <div className="space-y-6 animate-fade-in pb-12">
+                                    {/* Speech Bubble - First, matching Slide 1 */}
+                                    <div className="inline-block bg-white rounded-2xl p-6 shadow-lg max-w-md">
+                                        <p className="text-sm font-semibold text-primary mb-2">
+                                            Meet Mayank Sir
+                                        </p>
+                                        <p className="text-gray-700">
+                                            Expert Chemistry faculty helping students excel in NEET & JEE with simplified concepts
+                                        </p>
+                                    </div>
+
+                                    {/* Year End Sale Pill - Below the speech bubble */}
+                                    <div className="inline-block bg-secondary text-white px-6 py-2 rounded-full font-semibold text-sm">
+                                        Year End Sale
+                                    </div>
+
+                                    <h2 className="text-5xl md:text-6xl lg:text-7xl font-bold">
+                                        Get Up to<br />
+                                        <span className="bg-gradient-to-r from-secondary to-primary bg-clip-text text-transparent">
+                                            15% OFF
+                                        </span>
+                                    </h2>
+                                    <p className="text-xl text-gray-600 max-w-2xl">
+                                        On all courses for JEE & NEET
+                                    </p>
+                                    <a href="/courses">
+                                        <Button size="lg" variant="secondary" className="text-lg px-8">
+                                            Enroll Now
+                                        </Button>
+                                    </a>
                                 </div>
-                                <h2 className="text-5xl md:text-6xl lg:text-7xl font-bold">
-                                    Get Up to{" "}
-                                    <span className="bg-gradient-to-r from-secondary to-primary bg-clip-text text-transparent">
-                                        50% OFF
-                                    </span>
-                                </h2>
-                                <p className="text-xl text-gray-600 max-w-2xl">
-                                    On all courses for JEE, NEET & Class 6-12
-                                </p>
-                                <a href="/courses">
-                                    <Button size="lg" variant="secondary" className="text-lg px-8">
-                                        Enroll Now
-                                    </Button>
-                                </a>
+
+                                {/* Teacher Photo - Mayank Sir */}
+                                <div className="flex justify-center lg:justify-end">
+                                    <div className="relative">
+                                        <div className="w-64 h-64 md:w-80 md:h-80 rounded-full bg-gradient-to-br from-primary to-primary-dark flex items-center justify-center shadow-2xl overflow-hidden">
+                                            <Image
+                                                src="/assets/teachers/mayank.png"
+                                                alt="Mayank Sir"
+                                                width={320}
+                                                height={320}
+                                                className="w-full h-full object-contain scale-110"
+                                                priority
+                                            />
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -117,25 +147,55 @@ export default function HeroCarousel() {
                     {/* Slide 3 - Mission 100 */}
                     <div className="embla__slide flex-[0_0_100%] min-w-0">
                         <div className="container px-4 md:px-6 py-16 md:py-24">
-                            <div className="flex flex-col items-center justify-center text-center space-y-8 min-h-[400px]">
-                                <div className="inline-block bg-primary text-white px-6 py-2 rounded-full font-semibold text-sm">
-                                    Mission 100
+                            <div className="grid lg:grid-cols-2 gap-12 items-center">
+                                <div className="space-y-6 animate-fade-in">
+                                    {/* Speech Bubble - First, matching Slides 1 & 2 */}
+                                    <div className="inline-block bg-white rounded-2xl p-6 shadow-lg max-w-md">
+                                        <p className="text-sm font-semibold text-primary mb-2">
+                                            Meet Kirti Ma&apos;am
+                                        </p>
+                                        <p className="text-gray-700">
+                                            Expert Chemistry faculty with years of experience helping students achieve their NEET & JEE goals
+                                        </p>
+                                    </div>
+
+                                    {/* Mission 100 Pill - Below the speech bubble */}
+                                    <div className="inline-block bg-primary text-white px-6 py-2 rounded-full font-semibold text-sm">
+                                        Mission 100
+                                    </div>
+
+                                    <h2 className="text-5xl md:text-6xl lg:text-7xl font-bold">
+                                        NEET{" "}
+                                        <span className="bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
+                                            2026
+                                        </span>{" "}
+                                        Preparation
+                                    </h2>
+                                    <p className="text-xl text-gray-600 max-w-2xl">
+                                        Join our intensive program for guaranteed success
+                                    </p>
+                                    <a href="/courses">
+                                        <Button size="lg" className="text-lg px-8">
+                                            Enroll Now
+                                        </Button>
+                                    </a>
                                 </div>
-                                <h2 className="text-5xl md:text-6xl lg:text-7xl font-bold">
-                                    NEET{" "}
-                                    <span className="bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
-                                        2026
-                                    </span>{" "}
-                                    Preparation
-                                </h2>
-                                <p className="text-xl text-gray-600 max-w-2xl">
-                                    Join our intensive program for guaranteed success
-                                </p>
-                                <a href="/courses">
-                                    <Button size="lg" className="text-lg px-8">
-                                        Enroll Now
-                                    </Button>
-                                </a>
+
+                                {/* Teacher Photo - Kirti Ma'am */}
+                                <div className="flex justify-center lg:justify-end">
+                                    <div className="relative">
+                                        <div className="w-64 h-64 md:w-80 md:h-80 rounded-full bg-gradient-to-br from-primary to-primary-dark flex items-center justify-center shadow-2xl overflow-hidden">
+                                            <Image
+                                                src="/assets/teachers/kirti.png"
+                                                alt="Kirti Ma'am"
+                                                width={320}
+                                                height={320}
+                                                className="w-full h-full object-contain scale-110"
+                                                priority
+                                            />
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>

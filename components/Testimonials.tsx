@@ -1,6 +1,7 @@
 "use client";
 
 import { Quote } from "lucide-react";
+import Image from "next/image";
 
 interface Testimonial {
     id: number;
@@ -14,45 +15,51 @@ interface Testimonial {
 const testimonials: Testimonial[] = [
     {
         id: 1,
-        name: "Rahul Sharma",
-        achievement: "AIR 47 in NEET 2025",
-        course: "NEET",
+        name: "Vankatesh Amrutwar",
+        achievement: "IIT Bombay",
+        course: "JEE",
         text: "Catalyzer's offline coaching in Kota transformed my preparation. The daily classes, personal mentorship, and regular tests helped me achieve my dream rank. Adil Sir's teaching methodology made complex topics easy to understand.",
+        image: "/assets/toppers/vankateshamrutwariitbombay.png",
     },
     {
         id: 2,
-        name: "Priya Patel",
-        achievement: "AIR 156 in JEE Advanced 2025",
+        name: "Deepak Suthar",
+        achievement: "IIT Delhi",
         course: "JEE",
         text: "The faculty at Catalyzer Kota is exceptional. Their dedication and the comprehensive study material provided gave me the confidence to crack JEE Advanced. The doubt clearing sessions were incredibly helpful.",
+        image: "/assets/toppers/deepaksuthariitdelhi.png",
     },
     {
         id: 3,
-        name: "Amit Kumar",
-        achievement: "AIR 89 in NEET 2025",
-        course: "NEET",
+        name: "Palak Khandelwal",
+        achievement: "IIT Dhanbad",
+        course: "JEE",
         text: "Coming to Kota and joining Catalyzer was the best decision of my life. The intensive dropper batch program with 8+ hours of daily classes ensured I covered the entire syllabus thoroughly. Highly recommended!",
+        image: "/assets/toppers/palakkhandelwaliitdhanbad.png",
     },
     {
         id: 4,
-        name: "Sneha Reddy",
-        achievement: "AIR 234 in JEE Main 2025",
+        name: "Rudra Gupta",
+        achievement: "IIT Guwahati",
         course: "JEE",
         text: "Catalyzer's affordable fees without compromising on quality education is remarkable. The mock tests and all India test series helped me understand my weak areas and improve consistently.",
+        image: "/assets/toppers/rudraguptaiitguwahti.png",
     },
     {
         id: 5,
-        name: "Arjun Singh",
-        achievement: "AIR 112 in NEET 2025",
-        course: "NEET",
+        name: "Siddharth Sagar",
+        achievement: "IIT Roorkee",
+        course: "JEE",
         text: "The personalized attention and one-on-one mentoring at Catalyzer made all the difference. The teachers genuinely care about each student's success. Thank you for helping me achieve my dream!",
+        image: "/assets/toppers/siddharthsagariitroorke.png",
     },
     {
         id: 6,
-        name: "Ananya Gupta",
-        achievement: "AIR 298 in JEE Advanced 2025",
+        name: "Yogeshwari Chandrawat",
+        achievement: "IIT Delhi",
         course: "JEE",
         text: "The study environment at Catalyzer Kota campus is excellent. Daily practice tests and previous year papers practice gave me the edge I needed to crack JEE Advanced. Forever grateful!",
+        image: "/assets/toppers/yogeshwarichandrawatiitdelhi.png",
     },
 ];
 
@@ -81,9 +88,21 @@ export default function Testimonials() {
                             {testimonials[0].text}
                         </p>
                         <div className="flex items-center gap-4">
-                            <div className="w-12 h-12 rounded-full bg-gradient-to-br from-primary to-primary-dark flex items-center justify-center text-white font-bold text-xl">
-                                {testimonials[0].name.charAt(0)}
-                            </div>
+                            {testimonials[0].image ? (
+                                <div className="w-12 h-12 rounded-full overflow-hidden flex-shrink-0">
+                                    <Image
+                                        src={testimonials[0].image}
+                                        alt={testimonials[0].name}
+                                        width={48}
+                                        height={48}
+                                        className="w-full h-full object-cover"
+                                    />
+                                </div>
+                            ) : (
+                                <div className="w-12 h-12 rounded-full bg-gradient-to-br from-primary to-primary-dark flex items-center justify-center text-white font-bold text-xl">
+                                    {testimonials[0].name.charAt(0)}
+                                </div>
+                            )}
                             <div>
                                 <p className="font-bold text-gray-900">{testimonials[0].name}</p>
                                 <div className="flex items-center gap-2 text-sm">
@@ -110,9 +129,21 @@ export default function Testimonials() {
                                 {testimonial.text}
                             </p>
                             <div className="flex items-center gap-3 pt-4 border-t border-gray-100">
-                                <div className="w-10 h-10 rounded-full bg-gradient-to-br from-primary to-primary-dark flex items-center justify-center text-white font-bold">
-                                    {testimonial.name.charAt(0)}
-                                </div>
+                                {testimonial.image ? (
+                                    <div className="w-10 h-10 rounded-full overflow-hidden flex-shrink-0">
+                                        <Image
+                                            src={testimonial.image}
+                                            alt={testimonial.name}
+                                            width={40}
+                                            height={40}
+                                            className="w-full h-full object-cover"
+                                        />
+                                    </div>
+                                ) : (
+                                    <div className="w-10 h-10 rounded-full bg-gradient-to-br from-primary to-primary-dark flex items-center justify-center text-white font-bold">
+                                        {testimonial.name.charAt(0)}
+                                    </div>
+                                )}
                                 <div>
                                     <p className="font-bold text-sm text-gray-900">
                                         {testimonial.name}
@@ -121,11 +152,29 @@ export default function Testimonials() {
                                         <span className="text-primary font-semibold">
                                             {testimonial.achievement}
                                         </span>
+                                        <span className="text-gray-400">|</span>
+                                        <span className="text-gray-600">{testimonial.course}</span>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     ))}
+                </div>
+
+                {/* Google Reviews Link */}
+                <div className="mt-12 text-center">
+                    <a
+                        href="https://www.google.com/search?sca_esv=9cf56067a199ff72&rlz=1C1VDKB_enIN1113IN1113&sxsrf=AE3TifP4LvUtOBlCueThM-4FgFCMixm3Ug:1767730957772&si=AMgyJEtREmoPL4P1I5IDCfuA8gybfVI2d5Uj7QMwYCZHKDZ-EzZAW8VjIxtLHBia7QFTVLVTwclP_JDeKfDhmJMR_QuFpAMR69-iejKV5yHviftPfee_YGKy52oDkWhJhNRfNHi5B6CzTWUZv-77V09UokSl7ya3qotBniTYnx1v3xxeCiyP9KSnOwHELv1QMjwIS3QR7V96ztU06VkDc7OctGxQPfvcgw%3D%3D&q=Catalyzers+Institute+%7C+Best+institute+for+IIT-JEE+,Neet+and+Boards+Reviews&sa=X&ved=2ahUKEwinra_-3veRAxX7SWwGHfoUFW4Q0bkNegQINRAD&biw=2040&bih=949&dpr=0.67"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-flex items-center gap-2 text-base md:text-lg font-semibold text-gray-700 hover:text-primary transition-all duration-300 group"
+                    >
+                        <span className="group-hover:scale-110 transition-transform duration-300">⭐</span>
+                        <span className="group-hover:translate-x-1 transition-transform duration-300">
+                            View all Google Reviews
+                        </span>
+                        <span className="group-hover:translate-x-2 transition-transform duration-300">→</span>
+                    </a>
                 </div>
             </div>
         </section>

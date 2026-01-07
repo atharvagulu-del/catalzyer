@@ -3,10 +3,10 @@
 import { useEffect, useRef, useState } from "react";
 
 const stats = [
-    { label: "Happy Students", target: 5000000, suffix: "+" },
-    { label: "Mock Tests", target: 10000, suffix: "+" },
-    { label: "YouTube Subscribers", target: 8500000, suffix: "+" },
-    { label: "Expert Faculty", target: 500, suffix: "+" },
+    { label: "Happy Students", target: 2000, suffix: "+" },
+    { label: "Mock Tests", target: 1000, suffix: "+" },
+    { label: "YouTube Subscribers", target: 4000, suffix: "+" },
+    { label: "Expert Faculty", target: 3, suffix: "" },
 ];
 
 function useCountUp(target: number, duration: number = 2000) {

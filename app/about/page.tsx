@@ -355,24 +355,92 @@ export default function AboutPage() {
                 </div>
             </section>
 
+            {/* Why Catalyzers Section */}
+            <section className="relative py-16 md:py-24 overflow-hidden bg-white">
+                {/* Star Background Pattern */}
+                <div className="absolute inset-0 opacity-40 pointer-events-none">
+                    <Image
+                        src="/assets/background/star-pattern-white.png"
+                        alt="Background Pattern"
+                        fill
+                        className="object-cover"
+                    />
+                </div>
+
+                <div className="container px-4 md:px-6 relative z-10">
+                    <h2 className="text-3xl md:text-5xl font-bold text-center mb-12 text-gray-900">
+                        Why <span className="text-primary">CATALYZERS</span> is the <span className="text-[#F3C74C]">Best Choice for You</span>:
+                    </h2>
+
+                    <div className="max-w-4xl mx-auto space-y-8">
+                        {/* Point 1 */}
+                        <div>
+                            <h3 className="text-xl md:text-2xl font-bold text-[#00A3FF] mb-2">Top-Rated Faculty Team:</h3>
+                            <p className="text-lg text-gray-700 leading-relaxed">
+                                Learn from experienced educators and subject experts, including renowned mentors like Adil Sir, Kirti Ma&apos;am and Mayank Sir who bring deep insight and effective strategies for cracking competitive exams.
+                            </p>
+                        </div>
+
+                        {/* Point 2 */}
+                        <div>
+                            <h3 className="text-xl md:text-2xl font-bold text-[#00A3FF] mb-2">Comprehensive Courses:</h3>
+                            <p className="text-lg text-gray-700 leading-relaxed">
+                                Tailor-made programs for JEE, NEET, and Boards that cover the complete syllabus with equal emphasis on theory, application, and revision.
+                            </p>
+                        </div>
+
+                        {/* Point 3 */}
+                        <div>
+                            <h3 className="text-xl md:text-2xl font-bold text-[#00A3FF] mb-2">Result-Oriented Approach:</h3>
+                            <p className="text-lg text-gray-700 leading-relaxed">
+                                Structured study plans, regular tests, performance analysis, and personalized mentoring to track and boost student performance.
+                            </p>
+                        </div>
+
+                        {/* Point 4 */}
+                        <div>
+                            <h3 className="text-xl md:text-2xl font-bold text-[#00A3FF] mb-2">Modern Learning Environment:</h3>
+                            <p className="text-lg text-gray-700 leading-relaxed">
+                                Smart classrooms, doubt-solving zones, and access to high-quality study material, practice sheets, and mock tests.
+                            </p>
+                        </div>
+
+                        {/* Point 5 */}
+                        <div>
+                            <h3 className="text-xl md:text-2xl font-bold text-[#00A3FF] mb-2">Proven Track Record:</h3>
+                            <p className="text-lg text-gray-700 leading-relaxed">
+                                Hundreds of selections every year in IITs, NITs, AIIMS, BITS and other top institutions. Consistent top rankers in boards and competitive exams.
+                            </p>
+                        </div>
+
+                        {/* Closing Paragraph */}
+                        <div className="mt-8 p-6 bg-gray-50 rounded-2xl border border-gray-100 shadow-sm">
+                            <p className="text-lg text-gray-800 font-medium italic text-center leading-relaxed">
+                                &quot;At Catalyzers, we believe in igniting potential and fueling ambition. Whether your goal is to become an engineer, doctor, or a board topper, we provide the guidance, discipline, and support needed to reach the pinnacle of success.&quot;
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
             {/* Stats Section */}
             <section className="py-16 md:py-24 bg-gradient-to-br from-primary to-primary-dark text-white">
                 <div className="container px-4 md:px-6">
                     <div className="grid grid-cols-2 lg:grid-cols-4 gap-8 md:gap-12">
                         <div className="text-center">
-                            <div className="text-4xl md:text-5xl lg:text-6xl font-bold mb-2">5M+</div>
+                            <div className="text-4xl md:text-5xl lg:text-6xl font-bold mb-2">2K+</div>
                             <div className="text-sm md:text-base text-purple-200">Happy Students</div>
                         </div>
                         <div className="text-center">
-                            <div className="text-4xl md:text-5xl lg:text-6xl font-bold mb-2">10K+</div>
+                            <div className="text-4xl md:text-5xl lg:text-6xl font-bold mb-2">1000+</div>
                             <div className="text-sm md:text-base text-purple-200">Mock Tests</div>
                         </div>
                         <div className="text-center">
-                            <div className="text-4xl md:text-5xl lg:text-6xl font-bold mb-2">8.5M+</div>
+                            <div className="text-4xl md:text-5xl lg:text-6xl font-bold mb-2">4K+</div>
                             <div className="text-sm md:text-base text-purple-200">YouTube Subscribers</div>
                         </div>
                         <div className="text-center">
-                            <div className="text-4xl md:text-5xl lg:text-6xl font-bold mb-2">500+</div>
+                            <div className="text-4xl md:text-5xl lg:text-6xl font-bold mb-2">3</div>
                             <div className="text-sm md:text-base text-purple-200">Expert Faculty</div>
                         </div>
                     </div>
